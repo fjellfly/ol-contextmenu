@@ -256,6 +256,15 @@ export class Internal {
       li.addEventListener(
         'click',
         function (evt) {
+          console.log('preventClick');
+          evt.preventDefault();
+        },
+        false
+      );
+      li.addEventListener(
+        'touch',
+        function (evt) {
+          console.log('preventTouch');
           evt.preventDefault();
         },
         false

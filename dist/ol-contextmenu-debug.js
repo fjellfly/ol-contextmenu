@@ -2,7 +2,7 @@
   /*!
   * ol-contextmenu - v4.1.2
   * https://github.com/jonataswalker/ol-contextmenu
-  * Built: Tue Sep 06 2022 16:07:22 GMT+0200 (Central European Summer Time)
+  * Built: Tue Sep 06 2022 20:18:19 GMT+0200 (Central European Summer Time)
   */
 
 (function (global, factory) {
@@ -543,6 +543,15 @@
       li.addEventListener(
         'click',
         function (evt) {
+          console.log('preventClick');
+          evt.preventDefault();
+        },
+        false
+      );
+      li.addEventListener(
+        'touch',
+        function (evt) {
+          console.log('preventTouch');
           evt.preventDefault();
         },
         false
