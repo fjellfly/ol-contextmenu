@@ -245,6 +245,7 @@ export class Internal {
             const obj = {
               coordinate: this_.getCoordinateClicked(),
               data: this_.items[index].data || null,
+              evt: evt,
             };
             this_.closeMenu();
             callback(obj, this_.map);
